@@ -45,7 +45,7 @@ deploy website:
    stage: stage dev
    script:
 #     - mkdir /var/www/html
-     - cp -rf ./html/* /var/html
+     - cp -rf ./HTML/* /var/HTML
      - echo 'running ./build.sh'
 #   when: manual
    tags:
