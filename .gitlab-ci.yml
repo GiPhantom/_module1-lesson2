@@ -1,11 +1,3 @@
-image: doker
-
-services:
-  - docker:build
-
-build:
-  script:
-    - docker buid .
 
 stages:
   - test
