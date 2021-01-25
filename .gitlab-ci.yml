@@ -1,4 +1,3 @@
-
 stages:
   - test
   - build
@@ -46,7 +45,7 @@ deploy website:
    stage: stage dev
    script:
 #     - mkdir /var/www/html
-     - cp -rf ./html/* /var/www/html
+     - cp -rf ./html/* /var/html
      - echo 'running ./build.sh'
 #   when: manual
    tags:
