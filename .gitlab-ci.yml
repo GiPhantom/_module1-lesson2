@@ -10,25 +10,21 @@ install_env:
    script:
      - echo " test 1------------------------- "
    tags:
-     - docker_in_docker
-#     - stage-shell
-
+     - stage-shell
 
 run tests:
    stage: test
    script:
      - echo " test 2------------------------- "
    tags:
-#     - stage-shell
-     - docker_in_docker
+     - stage-shell
 
 linters:
    stage: test
    script:
      - echo " test linter--------------------- "
    tags:
-#     - stage-shell
-     - docker_in_docker
+     - stage-shell
 
 build:
    stage: build
@@ -36,27 +32,25 @@ build:
      - echo 'running ./build.sh' 
 #  when: manual
    tags:
-     - docker_in_docker
-#     - stage-shell
+     - stage-shell
 
 tests_after_build:
    stage: test2
    script:
      - echo " tests_after_build 1--------------------- "
    tags:
-#     - stage-shell
-     - docker_in_docker
+     - stage-shell
 
 deploy website:
    stage: stage dev
    script:
-#     - mkdir /var/www/html
-     - cp -rf ./HTML/* /var/HTML
+     - mkdir /var/www
+     - mkdir /var/www/html
+     - cp -rf ./html/* /var/www/html
      - echo 'running ./build.sh'
 #   when: manual
    tags:
-     - docker_in_docker
-#     - stage-shell
+     - stage-shell
    only:
      refs:
       - tags
@@ -70,11 +64,12 @@ deploy prod:
       - echo 'running ./build.sh'
    when: manual
    tags:
-     - docker_in_docker
-#     - stage-shell
+     - stage-shell
    only:
      refs:
       - tags
       - master
       - /^release.*$/
+
+
 
