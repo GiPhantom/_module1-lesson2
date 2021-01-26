@@ -51,11 +51,11 @@ deploy website:
 #   when: manual
    tags:
      - stagshell
-   only:
-     refs:
-      - tags
-      - master
-      - /^release.*$/
+#   only:
+#     refs:
+#      - tags
+#      - master
+#      - /^release.*$/
       
     
 deploy prod:
