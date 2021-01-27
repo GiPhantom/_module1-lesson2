@@ -16,14 +16,13 @@ Demo site
 
 Author
 -------
-<a href="https://www.themesine.com" target="_blank">ThemeSINE</a>
+<a href="https://gitlab.com/GiPhantom/skillbox_module1-lesson2/-/tree/master" target="_blank">GITLAB</a>
 
 Other templates
 ---------------
-<a href="https://www.themesine.com/downloads/dashloon-bootstrap-admin-dashboard/" rel="nofollow" target="_blank">DashLoon admin template</a>
 
 License
 --------
 Copyright (c) 2018 ThemeSINE
 
-TourNest is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the final products. But you always need to state that ThemeSINE is the original author of this template.
+TourNest is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the final products. But you always need to state that ThemeSINE is the original author of this template
