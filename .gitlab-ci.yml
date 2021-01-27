@@ -6,8 +6,8 @@ deploy:
    stage: deploy
    script:
      - mkdir /var/www
-     - mkdir /var/www/html
-     - cp -rf ./html/* /var/www/html
+#     - mkdir /var/www/html
+#     - cp -rf ./html/* /var/www/html
 #      - echo 'running ./build.sh'
 #   when: manual
    tags:
