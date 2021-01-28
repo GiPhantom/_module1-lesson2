@@ -5,14 +5,9 @@ stages:
 deploy:
    stage: deploy
    script:
-<<<<<<< HEAD
      - rm /var/www/html       
-           #     - mkdir /var/www
+#     - mkdir /var/www
      - mkdir /var/www/html
-=======
-     - mkdir /var/www
-#     - mkdir /var/www/html
->>>>>>> 749fd6d4af4ddd3f1de94f95a86a740944c2c881
      - cp -rf ./html/* /var/www/html
 #      - echo 'running ./build.sh'
 #   when: manual
