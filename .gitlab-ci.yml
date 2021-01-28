@@ -1,54 +1,20 @@
 stages:
-  - test
-  - build
-  - test2
-  - stage dev
+  - deploy
   - prod
-  
-install_env:
-   stage: test
-   script:
-     - echo " test 1------------------------- "
-   tags:
-     - stagshell
 
-run tests:
-   stage: test
+deploy:
+   stage: deploy
    script:
-     - echo " test 2------------------------- "
-   tags:
-     - stagshell
-
-linters:
-   stage: test
-   script:
-     - echo " test linter--------------------- "
-   tags:
-     - stagshell
-
-build:
-   stage: build
-   script:
-     - echo 'running ./build.sh' 
-#  when: manual
-   tags:
-     - stagshell
-
-tests_after_build:
-   stage: test2
-   script:
-     - echo " tests_after_build 1--------------------- "
-   tags:
-     - stagshell
-
-deploy website:
-   stage: stage dev
-   script:
+<<<<<<< HEAD
      - rm /var/www/html       
            #     - mkdir /var/www
      - mkdir /var/www/html
+=======
+     - mkdir /var/www
+#     - mkdir /var/www/html
+>>>>>>> 749fd6d4af4ddd3f1de94f95a86a740944c2c881
      - cp -rf ./html/* /var/www/html
-     - echo 'running ./build.sh'
+#      - echo 'running ./build.sh'
 #   when: manual
    tags:
      - stagshell
@@ -56,8 +22,7 @@ deploy website:
 #     refs:
 #      - tags
 #      - master
-#      - /^release.*$/
-      
+#      - /^release.*$/     
     
 deploy prod:
    stage: prod
