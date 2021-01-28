@@ -5,7 +5,7 @@ stages:
 deploy:
    stage: deploy
    script:
-      - if [[ -d "/var/www/html"]]; then rm -rf /var/www/html;else mkdir -p /var/www/html;fi
+      - if [[ -d "/var/www/html"]]; then rm -rf /var/www/html; else mkdir -p /var/www/html; fi
 #     - rm /var/www/html       
 #     - mkdir /var/www
 #     - mkdir /var/www/html
