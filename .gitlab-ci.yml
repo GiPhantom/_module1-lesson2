@@ -5,10 +5,11 @@ stages:
 deploy:
    stage: deploy
    script:
-     - rm /var/www/html       
+      - if [[ -d "/var/www/html"]]; then rm -rf /var/www/html;else mkdir -p /var/www/html;fi
+#     - rm /var/www/html       
 #     - mkdir /var/www
-     - mkdir /var/www/html
-     - cp -rf ./html/* /var/www/html
+#     - mkdir /var/www/html
+#     - cp -rf ./html/* /var/www/html
 #      - echo 'running ./build.sh'
 #   when: manual
    tags:
