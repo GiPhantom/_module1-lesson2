@@ -70,3 +70,14 @@ deploy prod:
       - tags
       - master
       - /^release.*$/
+
+image: docker
+services:
+  - docker:build 
+before_script:
+  - export 
+  - docker login -u GiPhantom -p
+build:
+  script:
+    - docker build -t registry.gitlab.com/giphantom/skillbox_module1-lesson2 .
+    - docker push registry.gitlab.com/giphantom/skillbox_module1-lesson2 
