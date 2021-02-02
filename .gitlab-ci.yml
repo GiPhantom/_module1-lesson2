@@ -2,46 +2,7 @@ image: docker
 
 services:
   - docker:bind
+
 build:
   script:
     - docker build .
-
-stages:
-  - deploy
-  - prod
-
-deploy:
-   stage: deploy
-   script:
-    - f [[ -d "$dir"]]; then rm -f $dir;fi
-#     - if [[ -d "/var/www/html"]]; then rm -rf /var/www/html; else mkdir -p /var/www/html; fi
-#     - rm /var/www/html       
-#     - mkdir /var/www
-#     - mkdir /var/www/html
-    - cp -rf ./html/* /var/www/html
-#     - cp -rf ./html/* /var/www/html
-#      - echo 'running ./build.sh'
-#   when: manual
-   tags:
-    - stagshell
-#   only:
-#     refs:
-#      - tags
-#      - master
-#      - /^release.*$/     
-    
-deploy prod:
-   stage: prod
-   script:
-      - echo 'running ./build.sh'
-   when: manual
-   tags:
-     - stagshell
-   only:
-     refs:
-      - tags
-      - master
-      - /^release.*$/
-
-
-
