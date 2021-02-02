@@ -24,7 +24,7 @@ linters:
    script:
      - echo " test linter--------------------- "
    tags:
-     - shell
+     - stagshell
 
 build:
    stage: build
