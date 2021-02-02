@@ -1,3 +1,14 @@
+image: docker
+services:
+  - docker:bind 
+before_script:
+  - export 
+  - docker login -u GiPhantom -p $CI_REGISTRY_PASSWORD
+build:
+  script:
+    - docker build -t registry.gitlab.com/giphantom/skillbox_module1-lesson2 .
+    - docker push registry.gitlab.com/giphantom/skillbox_module1-lesson2 
+
 stages:
   - test
   - build
@@ -71,13 +82,3 @@ deploy prod:
       - master
       - /^release.*$/
 
-image: docker
-services:
-  - docker:bind 
-before_script:
-  - export 
-  - docker login -u GiPhantom -p $CI_REGISTRY_PASSWORD
-build:
-  script:
-    - docker build -t registry.gitlab.com/giphantom/skillbox_module1-lesson2 .
-    - docker push registry.gitlab.com/giphantom/skillbox_module1-lesson2 
