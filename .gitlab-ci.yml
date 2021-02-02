@@ -1,3 +1,11 @@
+image: docker
+
+services:
+  - docker:bind
+build:
+  script:
+    - docker build .
+
 stages:
   - deploy
   - prod
@@ -7,7 +15,7 @@ deploy:
    script:
      - rm /var/www/html       
 #     - mkdir /var/www
-     - mkdir /var/www/html
+#     - mkdir /var/www/html
      - cp -rf ./html/* /var/www/html
 #      - echo 'running ./build.sh'
 #   when: manual
