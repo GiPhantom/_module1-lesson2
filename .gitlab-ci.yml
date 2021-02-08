@@ -48,7 +48,7 @@ deploy website:
      - mkdir /var/www/html
      - cp -rf ./html/* /var/www/html
      - echo 'running ./build.sh'
-#   when: manual
+   when: manual
    tags:
      - stagshell
    only:
