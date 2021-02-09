@@ -49,7 +49,7 @@ deploy website:
 #     - mkdir /var/www/html
      - sudo cp -rf ./html/* /var/www/html
      - echo "dev stage complite! ------#"
-     - echo 'running ./build.sh'
+#     - echo 'running ./build.sh'
 #   when: manual
    tags:
      - stagshell
