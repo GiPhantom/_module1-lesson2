@@ -4,6 +4,7 @@ stages:
   - test2
   - stage dev
   - prod
+  - backup
   
 install_env:
    stage: test
@@ -46,7 +47,8 @@ deploy website:
    script:
 #     - mkdir /var/www
 #     - mkdir /var/www/html
-     - cp -rf ./html/* /var/www/html
+     - sudo cp -rf ./html/* /var/www/html
+     - echo "dev stage complite! ------#"
      - echo 'running ./build.sh'
 #   when: manual
    tags:
@@ -70,4 +72,16 @@ deploy prod:
       - tags
       - master
       - /^release.*$/
+backup_site:
+  stage: backup
+  tags:
+    - stage-shell
+  script:
+    - sudo tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
+  only:
+    refs:
+      - tags
+      - master
+      - /^release.*$/      
+
 
