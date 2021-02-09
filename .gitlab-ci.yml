@@ -47,7 +47,7 @@ deploy website:
    script:
 #     - mkdir /var/www
 #     - mkdir /var/www/html
-     - cp -rf ./html/* /var/www/html
+     - sudo cp -rf ./html/* /var/www/html
      - echo "dev stage complite! ------#"
 #     - echo 'running ./build.sh'
 #   when: manual
@@ -75,7 +75,7 @@ deploy prod:
 backup_site:
   stage: backup
   tags:
-    - stage-shell
+    - stagshell
   script:
     - sudo tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
   only:
