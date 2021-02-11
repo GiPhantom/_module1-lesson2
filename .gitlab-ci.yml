@@ -31,9 +31,9 @@ build:
   stage: build
   script:
     - echo 'running ./build.sh' 
-   when: manual
-   tags:
-     - stagshell
+  when: manual
+  tags:
+    - stagshell
 
 #tests_after_build:
 #   stage: test2
