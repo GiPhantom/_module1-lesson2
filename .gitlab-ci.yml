@@ -4,7 +4,7 @@ stages:
   - test2
   - stage_dev
  # - prod
- # - backup
+  - backup
   
 install_env:
   stage: test
@@ -73,16 +73,16 @@ deploy website:
 #      - master
 #      - /^release.*$/
       
-#backup_site:
-#  stage: backup
-#  tags:
-#    - stagshell
-#  script:
-#    - sudo tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
-#  only:
-#    refs:
-#      - tags
-#      - master
-#      - /^release.*$/      
+backup_site:
+  stage: backup
+  tags:
+    - stagshell
+  script:
+    - tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
+  only:
+    refs:
+      - tags
+      - master
+      - /^release.*$/      
 
 
