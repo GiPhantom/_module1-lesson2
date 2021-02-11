@@ -13,17 +13,17 @@ install_env:
 #  tags:
 #    - stagshell     
 
-run tests:
-  stage: test
-  script:
-    - echo " test 2------------------------- "
+#run tests:
+#  stage: test
+#  script:
+#    - echo " test 2------------------------- "
 #  tags:
 #    - stagshel
 
-linters:
-  stage: test
-  script:
-    - echo " test linter--------------------- "
+#linters:
+#  stage: test
+#  script:
+#    - echo " test linter--------------------- "
 #  tags:
 #    - stagshell
 
