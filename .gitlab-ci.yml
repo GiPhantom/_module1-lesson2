@@ -6,12 +6,12 @@ stages:
  # - prod
  # - backup
   
-#install_env:
-#  stage: test
-#  script:
-#    - echo " test 1------------------------- "
-#  tags:
-#    - stagshell     
+install_env:
+  stage: test
+  script:
+    - echo " test 1------------------------- "
+  tags:
+    - stagshell     
 
 run tests:
   stage: test
@@ -20,12 +20,12 @@ run tests:
   tags:
     - stagshel
 
-#linters:
-#  stage: test
-#  script:
-#    - echo " test linter--------------------- "
-#  tags:
-#      - stagshell
+linters:
+  stage: test
+  script:
+    - echo " test linter--------------------- "
+  tags:
+    - stagshell
 
 build:
   stage: build
