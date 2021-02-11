@@ -45,8 +45,8 @@ tests_after_build:
 deploy website:
    stage: stage_dev
    script:
-     - mkdir /var/www
-     - mkdir /var/www/html
+#     - mkdir /var/www
+#     - mkdir /var/www/html
      - sudo cp -rf ./html/* /var/www/html
      - echo "dev stage complite! ------#"
      - echo 'running ./build.sh'
