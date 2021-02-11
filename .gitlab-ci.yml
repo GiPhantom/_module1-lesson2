@@ -10,8 +10,8 @@ install_env:
    stage: test
    script:
      - echo " test 1------------------------- "
-#   tags:
-#     - stagshell     
+   tags:
+     - stagshell     
 
 run tests:
    stage: test
