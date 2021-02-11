@@ -31,7 +31,7 @@ build:
   stage: build
   script:
     - echo 'running ./build.sh' 
-#  when: manual
+  when: manual
   tags:
     - stagshell
 
