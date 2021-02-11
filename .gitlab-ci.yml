@@ -2,7 +2,7 @@ stages:
   - test
   - build
   - test2
-  - stage dev
+  - stage_dev
   - prod
   - backup
   
@@ -43,7 +43,7 @@ tests_after_build:
      - stagshell
 
 deploy website:
-   stage: stage dev
+   stage: stage_dev
    script:
      - mkdir /var/www
      - mkdir /var/www/html
