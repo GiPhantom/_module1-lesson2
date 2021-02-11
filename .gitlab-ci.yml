@@ -11,21 +11,21 @@ install_env:
   script:
     - echo " test 1------------------------- "
   tags:
-    - stagshell     
+     - stagshell     
 
 run tests:
   stage: test
   script:
     - echo " test 2------------------------- "
-   tags:
-     - stagshel
+  tags:
+    - stagshel
 
 linters:
   stage: test
   script:
     - echo " test linter--------------------- "
-   tags:
-     - stagshell
+  tags:
+    - stagshell
 
 build:
   stage: build
