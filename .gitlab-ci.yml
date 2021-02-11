@@ -1,37 +1,37 @@
 stages:
-  - test
+#  - test
   - build
  # - test2
  # - stage_dev
  # - prod
  # - backup
   
-install_env:
-  stage: test
-  script:
-    - echo " test 1------------------------- "
-  tags:
-     - stagshell     
+#install_env:
+#  stage: test
+#  script:
+#    - echo " test 1------------------------- "
+#  tags:
+#     - stagshell     
 
-run tests:
-  stage: test
-  script:
-    - echo " test 2------------------------- "
-  tags:
-    - stagshel
+#run tests:
+#  stage: test
+#  script:
+#    - echo " test 2------------------------- "
+#  tags:
+#    - stagshel
 
-linters:
-  stage: test
-  script:
-    - echo " test linter--------------------- "
-  tags:
-    - stagshell
+#linters:
+#  stage: test
+#  script:
+#    - echo " test linter--------------------- "
+#  tags:
+#    - stagshell
 
 build:
   stage: build
   script:
     - echo 'running ./build.sh' 
-  when: manual
+#  when: manual
   tags:
     - stagshell
 
