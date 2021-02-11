@@ -10,37 +10,37 @@ install_env:
   stage: test
   script:
     - echo " test 1------------------------- "
-  tags:
-    - stagshell     
+#  tags:
+#    - stagshell     
 
 run tests:
   stage: test
   script:
     - echo " test 2------------------------- "
-  tags:
-    - stagshel
+#  tags:
+#    - stagshel
 
 linters:
   stage: test
   script:
     - echo " test linter--------------------- "
-  tags:
-    - stagshell
+#  tags:
+#    - stagshell
 
 build:
   stage: build
   script:
     - echo 'running ./build.sh' 
   when: manual
-  tags:
-    - stagshell
+#  tags:
+#    - stagshell
 
 tests_after_build:
    stage: test2
    script:
      - echo " tests_after_build 1--------------------- "
-   tags:
-     - stagshell
+#   tags:
+#     - stagshell
 
 deploy website:
    stage: stage_dev
