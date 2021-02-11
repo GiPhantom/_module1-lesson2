@@ -1,6 +1,6 @@
 stages:
   - test
- # - build
+  - build
  # - test2
  # - stage_dev
  # - prod
@@ -18,7 +18,7 @@ run tests:
    script:
      - echo " test 2------------------------- "
    tags:
-     - stagshell
+     - stagshel
 
 linters:
    stage: test
@@ -27,13 +27,13 @@ linters:
    tags:
      - stagshell
 
-#build:
-#   stage: build
-#   script:
-#     - echo 'running ./build.sh' 
-#  when: manual
-#  tags:
-#     - stagshell
+build:
+   stage: build
+   script:
+     - echo 'running ./build.sh' 
+   when: manual
+   tags:
+     - stagshell
 
 #tests_after_build:
 #   stage: test2
