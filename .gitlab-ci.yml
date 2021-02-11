@@ -11,21 +11,21 @@ stages:
 #  script:
 #    - echo " test 1------------------------- "
 #  tags:
-#     - stagshell     
+#    - stagshell     
 
 #run tests:
 #  stage: test
 #  script:
 #    - echo " test 2------------------------- "
 #  tags:
-#    - stagshel
+#     - stagshel
 
 #linters:
 #  stage: test
 #  script:
 #    - echo " test linter--------------------- "
 #  tags:
-#    - stagshell
+#      - stagshell
 
 build:
   stage: build
