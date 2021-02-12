@@ -16,7 +16,7 @@ TourNest - это необычный HTML5-адаптивный шаблон в�
 Демо-сайт
 ---------
 <a href = "http: //demo.themesine.
-com / "rel =" nofollow "target =" _ blank "> Демо </a>
+com / "rel =" nofollow "target =" _ blank "> Demo </a>
 
 Автор
 -------
