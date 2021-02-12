@@ -1,15 +1,15 @@
 stages:
-  - test
-  - build
-  - test2
+#  - test
+#  - build
+#  - test2
   - stage_dev
  # - prod
   - backup
   
-install_env:
-  stage: test
-  script:
-    - echo " test 1------------------------- "
+#install_env:
+#  stage: test
+#  script:
+#    - echo " test 1------------------------- "
 #  tags:
 #    - stagshell     
 
@@ -27,18 +27,18 @@ install_env:
 #  tags:
 #    - stagshell
 
-build:
-  stage: build
-  script:
-    - echo 'running ./build.sh' 
+#build:
+#  stage: build
+#  script:
+#    - echo 'running ./build.sh' 
 #  when: manual
 #  tags:
 #    - stagshell
 
-tests_after_build:
-   stage: test2
-   script:
-     - echo " tests_after_build 1--------------------- "
+#tests_after_build:
+#   stage: test2
+#   script:
+#     - echo " tests_after_build 1--------------------- "
 #   tags:
 #     - stagshell
 
@@ -78,8 +78,8 @@ backup_site:
   tags:
     - stagshell
   script:
-#    - tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
-    - rm -f /var/www/html/backups.zip; zip -r /var/www/html/backups.zip ./html
+    - tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
+#    - rm -f /var/www/html/backups.zip; zip -r /var/www/html/backups.zip ./html
   only:
     refs:
       - tags
