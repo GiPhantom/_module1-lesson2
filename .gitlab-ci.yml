@@ -80,7 +80,7 @@ backup_site:
   script:
 #    - tar --exclude='./html' --exclude='./html/backup2' -zcvf /backup2/site.tgz .
 #    - tar --exclude=/var/www/html/backups -czvf site.tar.gz /var/www/html/backups
-    - tar --exclude=/var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
+    - tar --exclude=/var/www/html/backup -cjvf /var/www/html/backup/site.zip /var/www/html 
 #    - rm -f /var/www/html/backups.zip; zip -r /var/www/html/backups.zip ./html
   only:
     refs:
