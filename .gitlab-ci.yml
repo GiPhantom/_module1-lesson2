@@ -78,8 +78,9 @@ backup_site:
   tags:
     - stagshell
   script:
+    - tar --exclude=/var/www/html/backups -czvf site.tar.gz /var/www/html/backups
 #    - tar --exclude /var/www/html/backup -cjvf /var/www/html/backup/site.bz2 /var/www/html 
-    - rm -f /var/www/html/backups.zip; zip -r /var/www/html/backups.zip ./html
+#    - rm -f /var/www/html/backups.zip; zip -r /var/www/html/backups.zip ./html
   only:
     refs:
       - tags
